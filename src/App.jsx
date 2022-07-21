@@ -1,4 +1,6 @@
+import React from 'react';
 import Expense from "./components/Expenses/Expense";
+import NewExpense from "./components/NewExpense/NewExpense";
 
 function App() {
 
@@ -29,11 +31,17 @@ function App() {
         },
     ];
 
+    const addExpenseHandler = expense => {
+        expenses.push(expense);
+    }
+
     return (
-        <div>
-            <h2>Let's get started!</h2>
-            <Expense expenses={expenses}/>
-        </div>
+        <React.StrictMode>
+            <div>
+                <NewExpense onAddExpense={addExpenseHandler}/>
+                <Expense expenses={expenses}/>
+            </div>
+        </React.StrictMode>
     );
 }
 
