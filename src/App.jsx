@@ -1,5 +1,5 @@
 import React from 'react';
-import Expense from "./components/Expenses/Expense";
+import Expense from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
 
 function App() {
