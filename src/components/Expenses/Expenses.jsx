@@ -24,12 +24,11 @@ export default function Expense(props) {
 
 
     return (
-        <div>
+        <li>
             <Card className="expenses">
                 <ExpensesFilter onFilterChange={expensesFilterHandler} selectedYear={filteredYear}/>
                 <ExpensesList expensesContent={filteredExpenses}/>
-
             </Card>
-        </div>
+        </li>
     )
 }
