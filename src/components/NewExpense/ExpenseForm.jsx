@@ -24,16 +24,16 @@ export default function ExpenseForm(props) {
 
         e.preventDefault();
 
-        const expenseDate = {
+        const expenseData = {
             title: enteredTitle,
-            amount: enteredAmount,
+            amount: +enteredAmount,
             date: new Date(enteredDate),
         }
         setEnteredTitle('');
         setEnteredAmount('');
         setEnteredAmount('');
 
-        props.onSaveExpenseData(expenseDate);
+        props.onSaveExpenseData(expenseData);
     }
 
     return (
